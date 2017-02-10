@@ -1,30 +1,33 @@
 import React, {Component} from 'react';
+import Message from './Message.jsx';
+import Notification from './Notification.jsx';
 
-class MessageList extends React.Component {
+class MessageList extends Component {
   render() {
     return (
-      <div>
-        <nav>
-          <h1>Chatty</h1>
-        </nav>
       <div id="message-list">
-        {this.props.messages.map((message, i) => {
-          return (
-          <div key={message.id}>
-            <div className="message" />
-            <span className="username">{message.username}</span>
-            <span className="content">{message.content} </span>
-          </div>
-        )
-        }
-    )}
-
-        <div className="message system">
-          Anonymous1 changed their name to nomnom.
-        </div>
+        {this.props.messages.map((message) => {
+          switch(message.type) {
+            case 'chatMessage':
+              return (
+                <Message
+                  key={message.id}
+                  username={message.username}
+                  content={message.content}
+                />
+              )
+            case 'chatNotification':
+              return (
+                <Notification
+                  key={message.id}
+                  content={message.content}
+                />
+              )
+          }
+        })}
       </div>
-      </div>
-    );
+    )
   }
 }
+
 export default MessageList;

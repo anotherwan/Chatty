@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 class Nav extends Component {
   render() {
     return (
       <nav>
         <h1>Chatty</h1>
+        <span>{props.numberOfClients}</span>
       </nav>
-    );
+    )
   }
 }
+
 export default Nav;
