@@ -44,7 +44,6 @@ class App extends Component {
   }
 
   _onSocketMsg = (event) => {
-    console.log(event)
     let newData = JSON.parse(event.data)
     if (newData.type === 'numberOfClients') {
       this.setState({numberOfClients: newData.numberOfClients})
