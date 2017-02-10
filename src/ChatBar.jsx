@@ -3,13 +3,13 @@ import React, {Component} from 'react';
 class ChatBar extends Component {
 
   onKeyUpUser = ((event) => {
-    if (event.key === 'Enter' && event.target.length){
+    if (event.key === 'Enter'){
       this.props.handleUserChange(event.target.value);
     }
   })
 
   onKeyUpMsg = ((event) => {
-    if (event.key === 'Enter' && event.target.value > 0){
+    if (event.key === 'Enter'){
       this.props.handleUserChange(document.getElementById('username').value);
       this.props.handleNewMessage(event.target.value);
       document.getElementById('new-message').value = '';
