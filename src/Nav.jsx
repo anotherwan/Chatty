@@ -3,8 +3,8 @@ import React from 'react';
 const Nav = (props) => {
   return (
     <nav>
-      <h1>Chatty</h1>
-      <span>{props.numberOfClients}</span>
+      <h1> - The Chattery - </h1>
+      <span><strong>{props.numberOfClients} User(s) Online</strong></span>
     </nav>
   )
 }
