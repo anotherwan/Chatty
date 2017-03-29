@@ -1,12 +1,15 @@
 const express = require ('express');
 const SocketServer = require('ws');
 const uuid = require('node-uuid');
+const path = require('path');
 
 const PORT = process.env.PORT || 4000;
+const INDEX = path.join(__dirname, 'index.html');
 
 const server = express()
-  .use(express.static('public'))
-  .listen(PORT);
+  // .use(express.static('public'))
+  .use((req, res) => res.sendFile(INDEX) )
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const wss = new SocketServer.Server({server});
 //wss is the web socket server for everyone and ws is for a single client
