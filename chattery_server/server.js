@@ -2,7 +2,7 @@ const express = require ('express');
 const SocketServer = require('ws');
 const uuid = require('node-uuid');
 
-const PORT = 4000;
+const PORT = process,env.PORT || 4000;
 
 const server = express()
   .use(express.static('public'))
