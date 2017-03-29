@@ -10,7 +10,7 @@ new WebpackDevServer(webpack(config), {
       poll: 1000
     }
   })
-  .listen(process.env.PORT || 3000, '0.0.0.0', function (err, result) {
+  .listen(process.env.PORT || 3000, function (err, result) {
     if (err) {
       console.log(err);
     }
