@@ -5,7 +5,7 @@ import Nav from './Nav.jsx';
 import MessageList from './MessageList.jsx';
 import Message from './Message.jsx';
 import ChatBar from './ChatBar.jsx';
-import config from './config.js';
+import config from '../config.js';
 
 let PORT = config.PORT;
 
