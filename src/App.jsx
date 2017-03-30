@@ -5,7 +5,9 @@ import Nav from './Nav.jsx';
 import MessageList from './MessageList.jsx';
 import Message from './Message.jsx';
 import ChatBar from './ChatBar.jsx';
+import config from './config.js';
 
+let PORT = config.PORT;
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +48,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.socket = new WebSocket('ws://localhost:4000');
+    this.socket = new WebSocket(config.HOST,config.PORT);
     this.socket.onmessage = this._onSocketMsg
   }
 
