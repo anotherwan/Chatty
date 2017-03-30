@@ -49,7 +49,7 @@ class App extends Component {
 
   componentDidMount() {
 
-    this.socket = new WebSocket(config.HOST,config.PORT);
+    this.socket = new WebSocket(`${config.HOST}${config.PORT}`);
     // const HOST = location.origin.replace(/^http/, 'ws');
     // this.socket = new WebSocket(HOST);
     // this.socket.onopen = () => conn.send('Connected')
