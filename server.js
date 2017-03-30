@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var wpconfig = require('./webpack.config');
-var config = require('./config');
 let PORT = process.env.PORT || 3000;
 
 new WebpackDevServer(webpack(wpconfig), {
