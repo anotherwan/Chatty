@@ -1,7 +1,7 @@
-React Boilerplate
+The Chattery
 =====================
 
-A minimal and light dev environment for ReactJS.
+A chat app built using ReactJS and WebSockets.
 
 ### Usage
 
@@ -11,7 +11,7 @@ Install the dependencies and start the 2 servers.
 npm install
 npm start
 open http://localhost:3000
-cd into chattery_server
+`cd` into `chattery_server`
 node server.js
 ```
 

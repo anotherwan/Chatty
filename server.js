@@ -11,7 +11,9 @@ new WebpackDevServer(webpack(wpconfig), {
       poll: 1000
     }
   })
+
   .listen(PORT, function (err, result) {
+  // .listen(process.env.PORT || 3000, function (err, result) {
     if (err) {
       console.log(err);
     }
